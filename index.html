@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOLIE - Guest List | Milan Electronic Scene</title>
+    <meta name="description" content="A hypnotic blend of Afro House and Tech House. Welcome to the vibe. This is FOLIE.">
+    <meta name="keywords" content="electronic, underground, Milano, exclusive event, guest list, afro house, tech house">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FOLIE - Guest List">
+    <meta property="og:description" content="A hypnotic blend of Afro House and Tech House, where tribal rhythms meet driving basslines.">
+    <meta property="og:type" content="event">
+    <meta property="og:image" content="./LogoFolieSVG.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./VideoFolie.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="./LogoFolieSVG.svg" as="image">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header Elements -->
+    <button class="header-button">
+        Invite your friend
+    </button>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video 
+            id="background-video" 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            preload="metadata"
+            poster="./VideoFolie.mp4">
+            <source src="./VideoFolie.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="./LogoFolieSVG.svg" alt="Folie Logo" class="logo">
+                    <span class="logo-x">x</span>
+                    <img src="./logo justme.png" alt="Just Me Logo" class="logo-justme">
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="main-title">GUEST LIST</h1>
+
+                <!-- Subtitles -->
+                <div class="subtitle-container">
+                    <p class="subtitle-1">A hypnotic blend of Afro House and Tech House, where tribal rhythms meet driving basslines.</p>
+                    <p class="subtitle-2">A journey through sound that keeps you moving, from the first beat to the last light.</p>
+                    <p class="subtitle-2">Welcome to the vibe.</p>
+                </div>
+
+                <!-- Final Title -->
+                <h2 class="final-title">This is FOLIE.</h2>
+                
+                <!-- Event Date and Location -->
+                <div class="event-info">
+                    <span>Via Luigi Camoens 2, Milano</span>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">DAYS</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">HOURS</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">MIN</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">SEC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Form Section -->
+        <section class="rsvp-section">
+            <div class="form-container">
+                <div class="form-content">
+                    <p class="form-intro">Entrance via online ticket, limited access</p>
+                    <p class="form-cta">Get the RSVP below.</p>
+                    
+                    <form id="rsvp-form" class="rsvp-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input 
+                                    type="text" 
+                                    id="nome" 
+                                    name="nome" 
+                                    placeholder="Nome" 
+                                    required
+                                    class="form-input"
+                                >
+                            </div>
+                            <div class="input-group">
+                                <input 
+                                    type="text" 
+                                    id="cognome" 
+                                    name="cognome" 
+                                    placeholder="Cognome" 
+                                    required
+                                    class="form-input"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Email" 
+                                required
+                                class="form-input"
+                            >
+                        </div>
+                        
+                        <div class="input-group">
+                            <input 
+                                type="tel" 
+                                id="telefono" 
+                                name="telefono" 
+                                placeholder="Telefono" 
+                                required
+                                class="form-input"
+                            >
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">GET RSVP</span>
+                            <div class="loading-spinner" style="display: none;">
+                                <div class="spinner"></div>
+                            </div>
+                        </button>
+                        
+                        <p class="disclaimer">You will receive more details by email after RSVP confirmation.</p>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <p>RSVP confirmed! Check your email for details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

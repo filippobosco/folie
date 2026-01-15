@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - THE MERGE</title>
+    <meta name="description" content="Thank you for your RSVP to THE MERGE - Secret Party">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .thank-you-content {
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            font-size: 32px;
+            color: white;
+            animation: checkmark 0.8s ease;
+        }
+        
+        .thank-you-title {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .thank-you-subtitle {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .thank-you-message {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .email-notice {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+        
+        .email-notice h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+        
+        .email-notice p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+        }
+        
+        .back-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 12px 24px;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.1s forwards;
+            display: inline-block;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+        
+        @keyframes checkmark {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .thank-you-title {
+                font-size: 36px;
+            }
+            
+            .thank-you-subtitle {
+                font-size: 20px;
+            }
+            
+            .thank-you-message {
+                font-size: 16px;
+            }
+            
+            .email-notice {
+                padding: 20px;
+            }
+            
+            .email-notice h3 {
+                font-size: 18px;
+            }
+            
+            .email-notice p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-container">
+        <video 
+            id="background-video" 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            preload="metadata"
+            poster="./VideoFolie.mp4">
+            <source src="./VideoFolie.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Thank You Content -->
+    <div class="thank-you-container">
+        <div class="thank-you-content">
+            <!-- Success Icon -->
+            <div class="success-icon">✓</div>
+            
+            <!-- Thank You Title -->
+            <h1 class="thank-you-title">Thank You!</h1>
+            
+            <!-- Subtitle -->
+            <p class="thank-you-subtitle">Your RSVP has been confirmed</p>
+            
+            <!-- Main Message -->
+            <div class="thank-you-message">
+                <p>Welcome to THE MERGE. You're now part of something exclusive.</p>
+            </div>
+            
+            <!-- Email Notice -->
+            <div class="email-notice">
+                <h3>📧 You'll Receive Your Ticket Soon</h3>
+                <p>Your digital ticket will be sent to your email address in the coming days.</p>
+                <p>Please keep an eye on your inbox (and spam folder) for the confirmation email with all the event details.</p>
+                <p><strong>Keep this email safe</strong> - you'll need it for entry to the event.</p>
+            </div>
+            
+            <!-- Back Button -->
+            <a href="index.html" class="back-button">← Back to Event</a>
+        </div>
+    </div>
+
+    <script>
+        // Initialize video background
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('background-video');
+            
+            video.addEventListener('loadeddata', function() {
+                video.play().catch(e => {
+                    console.log('Video autoplay prevented:', e);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
